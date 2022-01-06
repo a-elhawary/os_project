@@ -5,7 +5,7 @@
 /*===========================================================================*
  *				do_schedule				     *
  *===========================================================================*/
-int do_schedule(struct proc * caller, message * m_ptr)
+int do_schedule(struct proc *caller, message *m_ptr)
 {
 	struct proc *p;
 	int proc_nr;
@@ -18,7 +18,7 @@ int do_schedule(struct proc * caller, message * m_ptr)
 
 	/* Only this process' scheduler can schedule it */
 	if (caller != p->p_scheduler)
-		return(EPERM);
+		return (EPERM);
 
 	/* Try to schedule the process. */
 	priority = m_ptr->m_lsys_krn_schedule.priority;

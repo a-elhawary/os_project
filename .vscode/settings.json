@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.inc": "cpp",
+        "*.in": "c",
+        "__node_handle": "c",
+        "regex": "c"
+    }
+}

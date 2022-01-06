@@ -8,10 +8,11 @@
 #include "pagetable.h"
 
 /* A pagetable. */
-typedef struct {
+typedef struct
+{
 	/* Directory entries in VM addr space - root of page table.  */
-	u32_t *pt_dir;		/* page aligned (ARCH_VM_DIR_ENTRIES) */
-	u32_t pt_dir_phys;	/* physical address of pt_dir */
+	u32_t *pt_dir;	   /* page aligned (ARCH_VM_DIR_ENTRIES) */
+	u32_t pt_dir_phys; /* physical address of pt_dir */
 
 	/* Pointers to page tables in VM address space. */
 	u32_t *pt_pt[ARCH_VM_DIR_ENTRIES];
@@ -24,6 +25,6 @@ typedef struct {
 	u32_t pt_virtop;
 } pt_t;
 
-#define CLICKSPERPAGE (VM_PAGE_SIZE/CLICK_SIZE)
+#define CLICKSPERPAGE (VM_PAGE_SIZE / CLICK_SIZE)
 
 #endif
