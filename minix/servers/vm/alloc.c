@@ -58,6 +58,8 @@ struct
 #define MAXRESERVEDPAGES 300
 #define MAXRESERVEDQUEUES 15
 
+// TODO: insert inner table structs here
+
 static struct reserved_pages
 {
 	struct reserved_pages *next; /* next in use */
@@ -180,6 +182,8 @@ reservedqueue_addslot(struct reserved_pages *rq)
 	rps = &rq->slots[rq->n_available];
 
 	reservedqueue_fillslot(rq, rps, cl_addr, vir);
+
+	// TODO: add to inner tables
 
 	return OK;
 }

@@ -384,8 +384,7 @@ off_t position;													 /* file pointer */
 			}
 		}
 		// student edit: added this for loop
-		for (int i = 0; i < EXTENT_SIZE)
-			; i++)
+		for (int i = 0; i < EXTENT_SIZE; i++)
 		{
 			if ((b = alloc_block(rip, goal)) == NO_BLOCK)
 			{
